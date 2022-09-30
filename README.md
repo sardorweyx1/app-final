@@ -73,22 +73,17 @@ General requirements:
 
 Application requirements:
 
-1. Gradle, latest version. Multi-module project.
 
-2. Application packages root: com.mjc.school.
+1. Hibernate should be used as a JPA implementation for data access.
 
-3. Hibernate should be used as a JPA implementation for data access.
+2. Spring Framework & Spring Boot, the latest version.
 
-4. Spring Framework & Spring Boot, the latest version.
-
-5. Java Code Convention is mandatory.
+3. Java Code Convention is mandatory.
 
 
 Demo:
 
-1. Application should be deployed before demo.
+1. Demonstrate API using Postman tool. Prepare for demo Postman collection with APIs.
 
-2. Demonstrate API using Postman tool. Prepare for demo Postman collection with APIs.
-
-3. Candidate should be able to answer theoretical and practical questions during demo session.
+2. Candidate should be able to answer theoretical and practical questions during demo session.
 
