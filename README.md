@@ -41,17 +41,17 @@ Business requirements:
 
 -	Get Tags and Authors:
 
-      o	get all
+         o	get all
 
-      o	by Id
+         o	by Id
 
-      o	by part Name
+         o	by part Name
 
-      o	by News Id (URL example:
+         o	by News Id (URL example:
 
-          /news/{newsId}/tags - should return tags collection
-    
-          /news/{newsId}/authors - should return 1 author)
+             /news/{newsId}/tags - should return tags collection
+     
+             /news/{newsId}/authors - should return 1 author)
 
 -	Get authors with amount of written news. Sort by news amount Desc.
 
