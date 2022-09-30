@@ -13,21 +13,21 @@ Business requirements:
 
 -	Get News:
 
-   o	get all
+      o	get all
 
-   o	by Id
+      o	by Id
 
-   o	search (all params are optional and can be used in conjunction):
+      o	search (all params are optional and can be used in conjunction):
    
-      *	by tag names and tag ids (many tags)
+            *	by tag names and tag ids (many tags)
       
-      *	by author name (one author)
+            *	by author name (one author)
       
-      *	by part of Title 
+            *	by part of Title 
       
-      *	by part of Content
+            *	by part of Content
 
-   o	sort by Created, Modified Asc/Desc. Default: Created Desc
+      o	sort by Created, Modified Asc/Desc. Default: Created Desc
    
    -	Get Comments:
 
