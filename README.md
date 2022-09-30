@@ -13,8 +13,8 @@ Business requirements:
 
 -	Get News:
 
-o	get all
+   o	get all
 
-o	by Id
+   o	by Id
 
-o	search (all params are optional and can be used in conjunction):
+   o	search (all params are optional and can be used in conjunction):
