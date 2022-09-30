@@ -53,15 +53,9 @@ Business requirements:
      
              /news/{newsId}/authors - should return 1 author)
 
--	Get authors with amount of written news. Sort by news amount Desc.
 
 -	Optional:  load Content of News through separate operation
 
-3. Request URL, params and body should be validated.
-
-4. Support HATEOAS on REST endpoints.
-
-5. Use Swagger to document RESTful API.
 
 General requirements:
 
