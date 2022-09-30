@@ -1,0 +1,11 @@
+uz\weyx\repository\AuthorRepository.class
+uz\weyx\specs\NewSpecification.class
+uz\weyx\entity\Author.class
+uz\weyx\repository\NewsRepository.class
+uz\weyx\entity\News.class
+uz\weyx\repository\CommentRepository.class
+uz\weyx\entity\Comment.class
+uz\weyx\RepoApplication.class
+uz\weyx\repository\TagRepository.class
+uz\weyx\specs\SearchCriteria.class
+uz\weyx\entity\Tag.class

@@ -1,0 +1,5 @@
+uz\weyx\ControlApplication.class
+uz\weyx\controller\AuthorController.class
+uz\weyx\controller\NewsController.class
+uz\weyx\controller\CommentController.class
+uz\weyx\controller\TagController.class
