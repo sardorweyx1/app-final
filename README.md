@@ -13,45 +13,45 @@ Business requirements:
 
 -	Get News:
 
-      o	get all
+        o	get all
 
-      o	by Id
+        o	by Id
 
-      o	search (all params are optional and can be used in conjunction):
+        o	search (all params are optional and can be used in conjunction):
    
-            *	by tag names and tag ids (many tags)
+              *	by tag names and tag ids (many tags)
       
-            *	by author name (one author)
+              *	by author name (one author)
       
-            *	by part of Title 
+              *	by part of Title 
       
-            *	by part of Content
+              *	by part of Content
 
-      o	sort by Created, Modified Asc/Desc. Default: Created Desc
+        o	sort by Created, Modified Asc/Desc. Default: Created Desc
    
    -	Get Comments:
 
-o	by News Id (URL example: /news/{newsId}/comments)
+         o	by News Id (URL example: /news/{newsId}/comments)
 
-o	by Id
+         o	by Id
 
-o	sort by Created, Modified Asc/Desc. Default: Created Desc
+         o	sort by Created, Modified Asc/Desc. Default: Created Desc
 
 -	CRD operations for Tag, and Author
 
 -	Get Tags and Authors:
 
-o	get all
+      o	get all
 
-o	by Id
+      o	by Id
 
-o	by part Name
+      o	by part Name
 
-o	by News Id (URL example:
+      o	by News Id (URL example:
 
-     /news/{newsId}/tags - should return tags collection
+          /news/{newsId}/tags - should return tags collection
     
-     /news/{newsId}/authors - should return 1 author)
+          /news/{newsId}/authors - should return 1 author)
 
 -	Get authors with amount of written news. Sort by news amount Desc.
 
