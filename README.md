@@ -7,3 +7,6 @@ Business requirements:
 
 •	All Name, Title and Content fields are required
 
+2. The system should expose REST APIs to perform the following operations:
+
+-	CUD operations (what_is_CRUD) for News and Comment. If new tags and authors are passed during creation/modification – they should be created in the DB
