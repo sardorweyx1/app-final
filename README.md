@@ -37,3 +37,18 @@ o	by Id
 
 o	sort by Created, Modified Asc/Desc. Default: Created Desc
 
+-	CRD operations for Tag, and Author
+
+-	Get Tags and Authors:
+
+o	get all
+
+o	by Id
+
+o	by part Name
+
+o	by News Id (URL example:
+
+     /news/{newsId}/tags - should return tags collection
+    
+     /news/{newsId}/authors - should return 1 author)
