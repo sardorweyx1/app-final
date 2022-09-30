@@ -27,3 +27,13 @@ Business requirements:
       
       *	by part of Content
 
+   o	sort by Created, Modified Asc/Desc. Default: Created Desc
+   
+   -	Get Comments:
+
+o	by News Id (URL example: /news/{newsId}/comments)
+
+o	by Id
+
+o	sort by Created, Modified Asc/Desc. Default: Created Desc
+
