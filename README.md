@@ -18,3 +18,12 @@ Business requirements:
    o	by Id
 
    o	search (all params are optional and can be used in conjunction):
+   
+      *	by tag names and tag ids (many tags)
+      
+      *	by author name (one author)
+      
+      *	by part of Title 
+      
+      *	by part of Content
+
