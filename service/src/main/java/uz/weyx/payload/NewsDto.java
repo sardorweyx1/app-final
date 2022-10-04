@@ -25,5 +25,5 @@ public class NewsDto {
     @NotNull
     private String authorName;
 
-    private Set<Integer> tag;
+    private Set<String> tagNames;
 }

@@ -4,6 +4,7 @@ uz\weyx\payload\CommentDto.class
 uz\weyx\payload\TagDto.class
 uz\weyx\payload\AuthorDto.class
 uz\weyx\payload\NewsCriteria.class
+uz\weyx\payload\SearchDto.class
 uz\weyx\service\TagService.class
 uz\weyx\payload\NewsDto.class
 uz\weyx\service\CommentService.class

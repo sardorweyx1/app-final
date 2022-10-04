@@ -2,6 +2,7 @@ package uz.weyx.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import uz.weyx.entity.Tag;
 
@@ -12,13 +13,15 @@ import java.util.Set;
 @Repository
 public interface TagRepository extends JpaRepository<Tag, Integer> {
 
-    @Query(value = "SELECT * FROM tag t WHERE LOWER(t.name) LIKE LOWER(CONCAT('%',?1,'%'))", nativeQuery = true)
+    @Query(value = "SELECT * FROM tags t WHERE LOWER(t.name) LIKE LOWER(CONCAT('%',?1,'%'))", nativeQuery = true)
     List<Tag> getByPartName(String name);
 
     boolean existsByName(@Size(min = 3, max = 5) String name);
 
-    @Query(value = "select * from tag where tag.id in :tagsId;", nativeQuery = true)
-    List<Tag> getByTagListId(Set<Integer> tagsId);
+    @Query(value = "select * from tags where tags.tag_id in :tagsId;", nativeQuery = true)
+    List<Tag> getByTagListId(@Param("tagsId") Set<Integer> tagsId);
 
+    @Query(value = "select * from tags where tags.name in (?1);", nativeQuery = true)
+    Set<Tag> getByTagNames(@Param("tagNames") Set<String> tagNames);
 
 }

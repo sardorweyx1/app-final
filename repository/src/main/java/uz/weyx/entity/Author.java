@@ -12,6 +12,11 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 @Entity
 public class Author {
+
+    public Author(String name) {
+        this.name = name;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

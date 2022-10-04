@@ -32,13 +32,13 @@ public class TagService {
         return tagRepository.getByPartName(name);
     }
 
-    public boolean save(TagDto tagDto) {
+    public Tag save(TagDto tagDto) {
         boolean existsByName = tagRepository.existsByName(tagDto.getName());
-        if(existsByName) return false;
+        if(existsByName) return null;
         Tag tag=new Tag();
         tag.setName(tagDto.getName());
         tagRepository.save(tag);
-        return true;
+        return tag;
     }
 
     public boolean delete(Integer id) {

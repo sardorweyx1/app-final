@@ -33,7 +33,7 @@ public class CommentService {
         Optional<Comment> optionalComment = commentRepository.findById(commentId);
         if (optionalComment.isEmpty()) return new Comment();
         Comment comment = optionalComment.get();
-        comment.setContent(comment.getContent());
+        comment.setContent(commentDto.getContent());
         return comment;
     }
 
