@@ -1,11 +1,9 @@
 package uz.weyx.service;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import uz.weyx.entity.Tag;
 import uz.weyx.payload.TagDto;
-import uz.weyx.repository.NewsRepository;
 import uz.weyx.repository.TagRepository;
 
 import java.util.List;
@@ -16,7 +14,7 @@ import java.util.Optional;
 public class TagService {
 
     private final TagRepository tagRepository;
-    private final NewsRepository newsRepository;
+
 
     public List<Tag> getAll() {
         return tagRepository.findAll();
@@ -49,4 +47,7 @@ public class TagService {
     }
 
 
+    public List<Tag> getTagsByNewsId(Integer newsId) {
+        return tagRepository.getTagsByNewsId(newsId);
+    }
 }

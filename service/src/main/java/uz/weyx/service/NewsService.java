@@ -102,17 +102,6 @@ public class NewsService {
         return newTags;
     }
 
-    public List<Tag> getByNewsId(Integer newsId) {
-        return newsRepository.getTagsByNewsId(newsId);
-    }
-
-    public Author getAuthorByNewsId(Integer newsId) {
-        return newsRepository.getAuthorByNewsId(newsId);
-    }
-
-    public Comment getCommentByNewsId(Integer newsId) {
-        return newsRepository.getCommentByNewsId(newsId);
-    }
 
     public List<News> findByPartOfTitle(String title) {
         return newsRepository.findAll(isPartOfTitle(title));

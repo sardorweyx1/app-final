@@ -25,7 +25,7 @@ public class Comment {
     @Column(nullable = false,columnDefinition = "text")
     private String content;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private News news;
 
     @Column(updatable = false, nullable = false)

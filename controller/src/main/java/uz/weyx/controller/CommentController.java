@@ -27,6 +27,12 @@ public class CommentController {
         return ResponseEntity.ok(comment);
     }
 
+    @GetMapping("/{newsId}/comments")
+    public ResponseEntity<?> getCommentByNewsId(@PathVariable Integer newsId){
+        Comment comment=commentService.getCommentByNewsId(newsId);
+        return ResponseEntity.ok(comment);
+    }
+
     @GetMapping("/sortasc")
     public ResponseEntity<?> sortAsc() {
         List<Comment> sortComment = commentService.sortAsc();

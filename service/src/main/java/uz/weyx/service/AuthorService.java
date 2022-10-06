@@ -58,6 +58,8 @@ public class AuthorService {
     }
 
     public Author getByNewsId(Integer newsId) {
-        return newsRepository.findByAuthorId(newsId);
+//        return newsRepository.findByAuthorId(newsId);
+
+        return authorRepository.getAuthorByNewsId(newsId);
     }
 }

@@ -22,6 +22,6 @@ public class Author {
     private Integer id;
 
     @Size(min = 3,max = 15)
-    @Column(columnDefinition = "text",unique = true,nullable = false)
+    @Column(unique = true,nullable = false)
     private String name;
 }

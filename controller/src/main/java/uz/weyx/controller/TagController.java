@@ -12,7 +12,7 @@ import java.util.Objects;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/fap/tag")
+@RequestMapping("/api/tag")
 public class TagController {
 
     private final TagService tagService;
@@ -32,6 +32,12 @@ public class TagController {
     @GetMapping("/par")
     public ResponseEntity<?> getByParam(@RequestParam String name) {
         List<Tag> tagList = tagService.getByParam(name);
+        return ResponseEntity.ok(tagList);
+    }
+
+    @GetMapping("/{newsId}/tags")
+    public ResponseEntity<?> getByNewsId(@PathVariable Integer newsId){
+        List<Tag> tagList = tagService.getTagsByNewsId(newsId);
         return ResponseEntity.ok(tagList);
     }
 

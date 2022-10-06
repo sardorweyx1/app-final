@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/fap/author")
+@RequestMapping("/api/author")
 public class AuthorController {
 
 
@@ -35,7 +35,7 @@ public class AuthorController {
         return ResponseEntity.ok(authorList);
     }
 
-    @GetMapping("/{newsId}")
+    @GetMapping("/news/{newsId}")
     public ResponseEntity<?> getByNewsId(@PathVariable Integer newsId) {
         Author author = authorService.getByNewsId(newsId);
         return ResponseEntity.ok(author);

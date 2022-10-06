@@ -21,7 +21,7 @@ public class CommentService {
 
     public Comment create(CommentDto commentDto) {
         Comment comment = new Comment();
-        comment.setContent(comment.getContent());
+        comment.setContent(commentDto.getContent());
         Optional<News> byId = newsRepository.findById(commentDto.getNewsId());
         News news = byId.get();
         comment.setNews(news);
@@ -31,9 +31,12 @@ public class CommentService {
 
     public Comment edit(Integer commentId, CommentDto commentDto) {
         Optional<Comment> optionalComment = commentRepository.findById(commentId);
-        if (optionalComment.isEmpty()) return new Comment();
+        Optional<News> optionalNews = newsRepository.findById(commentDto.getNewsId());
+        if (optionalComment.isEmpty()&&optionalNews.isEmpty()) return new Comment();
         Comment comment = optionalComment.get();
         comment.setContent(commentDto.getContent());
+        comment.setNews(optionalNews.get());
+        commentRepository.save(comment);
         return comment;
     }
 
@@ -59,5 +62,9 @@ public class CommentService {
 
     public List<Comment> sortDesc() {
         return commentRepository.findAll(Sort.by(Sort.Direction.DESC, "modified"));
+    }
+
+    public Comment getCommentByNewsId(Integer newsId) {
+        return commentRepository.getCommentByNewsId(newsId);
     }
 }

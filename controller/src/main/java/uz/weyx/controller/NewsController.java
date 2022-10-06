@@ -34,23 +34,6 @@ public class NewsController {
        return ResponseEntity.ok(news);
     }
 
-    @GetMapping("/{newsId}/tags")
-    public ResponseEntity<?> getByNewsId(@PathVariable Integer newsId){
-        List<Tag> tagList = newsService.getByNewsId(newsId);
-        return ResponseEntity.ok(tagList);
-    }
-
-    @GetMapping("/{newsId}/authors")
-    public ResponseEntity<?> getAuthorByNewsId(@PathVariable Integer newsId){
-        Author author=newsService.getAuthorByNewsId(newsId);
-        return ResponseEntity.ok(author);
-    }
-
-    @GetMapping("/{newsId}/comments")
-    public ResponseEntity<?> getCommentByNewsId(@PathVariable Integer newsId){
-        Comment comment=newsService.getCommentByNewsId(newsId);
-        return ResponseEntity.ok(comment);
-    }
 
 
     @GetMapping("/title")

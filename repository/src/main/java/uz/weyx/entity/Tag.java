@@ -23,7 +23,6 @@ public class Tag {
 
     @Size(min = 3,max = 55)
     @Column(nullable = false,unique = true,columnDefinition = "text")
-    @JsonIgnore
     private String name;
 
     @ManyToMany(mappedBy = "tags")
