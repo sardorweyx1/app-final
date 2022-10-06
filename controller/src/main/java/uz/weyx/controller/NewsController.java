@@ -1,7 +1,6 @@
 package uz.weyx.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import uz.weyx.entity.News;
@@ -46,7 +45,7 @@ public class NewsController {
     }
 
     @GetMapping("/author")
-    public ResponseEntity<?> byPartOfAuthorName(@PageableDefault(page = 0,size = 5) @RequestParam String authorName){
+    public ResponseEntity<?> byPartOfAuthorName(@RequestParam String authorName){
         List<News> newsList=newsService.findByPartOfAuthorName(authorName);
         return ResponseEntity.ok(newsList);
     }
