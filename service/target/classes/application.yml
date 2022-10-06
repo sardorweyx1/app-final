@@ -1,6 +1,0 @@
-server:
-  port: 8082
-
-spring:
-  main:
-    allow-bean-definition-overriding: true
