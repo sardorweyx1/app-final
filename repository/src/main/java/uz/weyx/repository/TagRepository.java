@@ -24,6 +24,6 @@ public interface TagRepository extends JpaRepository<Tag, Integer> {
     @Query(value = "select * from tags where tags.name in (?1);", nativeQuery = true)
     Set<Tag> getByTagNames(@Param("tagNames") Set<String> tagNames);
 
-    @Query(value = "select tags.tag_id,name from news join news_tags on news.news_id=news_tags.news_id and news.news_id=:id join tags on tags.tag_id=news_tags.tag_id", nativeQuery = true)
+    @Query(value = "select tags.tag_id,name from news join news_tags on news.news_id=news_tags.news_id and news.news_id=?1 join tags on tags.tag_id=news_tags.tag_id", nativeQuery = true)
     List<Tag> getTagsByNewsId(@Param("id") Integer id); //news_id=?1 da muammo bo'ishi mumkin
 }
